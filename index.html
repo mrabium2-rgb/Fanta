@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fanta Homepage</title>
+
+   <style>
+
+   .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fa7a03;
+    transition: 0.3s;
+    height: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0b2a5b;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.navbar h2{
+    font-size: 50px;
+    margin: 0px 50px;
+}
+
+.hero{
+   display: flex; 
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   height: 100vh;
+   color: white;
+   background-color: rgb(255, 125, 10);
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.hero img {
+width: 300px;
+border-radius: 50%;
+
+background-color: transparent;
+box-shadow: 0 0 20px orangered;
+}
+
+button {
+    background-color: white;
+    color: #ff7a00;
+    padding: 10px 20px;
+    border: 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 150px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.float-btn{
+    position: fixed;
+    right: 50px;
+    border: 2px solid ;
+    bottom: 40px;
+    
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 40px;
+}
+
+button:hover{
+    background-color: #0b2a5b;
+            color: white;
+            border-color: #0b2a5b;
+}
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+section{
+    padding: 80px 20px;
+    background-color: white;
+    color: #0b2a5b;
+}
+
+section h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0b2a5b;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+.flavours {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+}
+
+.flavour-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flavour {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff7a00;
+}
+
+.contact {
+    background-color: #0b2a5b;
+    color: white;
+    padding: 60px 20px;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact h2 {
+    color: #ff7a00;
+}
+
+ .hero-text p {
+	 -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1s;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-text h1 {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+
+    .navbar  {
+        flex-direction: row;
+        padding: 10px;
+        padding-top: 0;
+        height: 60px;
+    }
+
+    .navbar div {
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 5px 0;
+        flex-direction: column;
+        font-size: 12px;
+        padding-right: 20px;
+        padding-top: 0;
+    }
+
+    .navbar h2{
+        font-size: 40px;
+        padding-top: 0;
+        margin: 20px 10px;
+    }
+
+    .hero-text{
+        padding-top: 0px;
+    }
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+
+    .hero-text p{
+        font-size: 16px;
+    }
+
+    button{
+        width: 100px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    .about p {
+        padding: 0 10px;
+    }
+
+    .flavour-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flavour{
+        width: 60px;
+    }
+
+    .hero{
+        flex-direction: column;
+        padding-top: 0px;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .button{
+        display: flex;
+        padding-top: 100px;
+        justify-content: space-between;
+    }
+
+.hero img{
+   width: 200px;
+   padding: 0;
+   margin-bottom: 0;
+}
+
+}
+
+</style> 
+
+</head>
+
+<body>
+  <div class="navbar">
+    <h2>
+        <span style="color: rgb(247, 66, 0);">Fan</span>
+        <span style="color: #0b2a5b;">ta</span>
+    </h2>
+
+    <div class="a">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</div> 
+<div class="hero">
+
+        <div class="hero-image">
+        <img src="Fanta Logo.jpeg" alt="Fanta Logo">
+    </div>
+
+    <div class="hero-text">
+        <h1>Enjoy Refreshing Fanta</h1>
+        <p>Brighten your day with a cool and tasty drink.</p>
+        <div class="button">
+        <button class="hero-btn">Explore More</button>
+        </div>
+        <button class="float-btn">Order now</button>
+    </div>
+
+</div>
+
+<section class="about">
+    <h2>About Fanta</h2>
+    <p>
+        Fanta is a vibrant orange-flavoured soft drink that brings fun, freshness,
+        and excitement to every moment. Whether you're at home, at work, or on the go,
+        Fanta delivers a refreshing experience that keeps you energised and happy.
+    </p>
+
+    <p>
+        Loved by many around the world, Fanta is known for its bold taste,
+        bright colour, and the ability to turn ordinary moments into something special.
+    </p>
+</section>
+    <section class="flavours">
+    <h2>Our Flavours</h2>
+
+    <div class="flavour-list">
+        <div class="flavour">🍊 Orange</div>
+        <div class="flavour">🍏 Apple</div>
+        <div class="flavour">🍍 Pineapple</div>
+    </div>
+</section>
+<section class="contact">
+    <h2>Contact Us</h2>
+
+    <p>Email: <a href="mailto:contact@fanta.com">contact@fanta.com</a></p>
+    <p>Phone: <a href="tel:+2349026214056">+2349026214056</a></p>
+    <p>Location: Nigeria</p>
+    <p class="copyright">
+        © 2026 Fanta. All rights reserved.
+    </p>
+</section>
+</body>
+</html>
